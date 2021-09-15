@@ -1,0 +1,101 @@
+<header>
+    {{>stickyHeader}}
+    <div class="flex-col">
+        <img src="../../assets/images/pageTitle.jpg" class="absolute object-cover filter brightness-[.3] w-full h-full z-0"/>
+        <!--hamburger menu !-->
+        <div class="relative mx-auto md:hidden " x-data="{hamOpen: false}">
+            <div class=" max-w-7xl mx-auto">
+            <nav class="absolute top-0 z-30 left-4"> 
+                <button class="w-14 focus:outline-none bg-transparent rounded" @click="hamOpen= !hamOpen">
+                    <div class="block w-5 absolute left-6 top-6 transform -translate-x-1/2 -translate-y-1/2"> 
+                        <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': hamOpen,' -translate-y-1.5': !hamOpen }"></span> 
+                        <span class="block absolute h-0.5 w-5 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': hamOpen } "></span> 
+                        <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': hamOpen, ' translate-y-1.5': !hamOpen}"></span> 
+                    </div>
+                </button> 
+            </nav>
+            </div>
+            <div x-show="hamOpen" @click.away="hamOpen = !hamOpen" class="bg-white fixed w-screen h-screen z-20 top-0">
+                <img src="../../assets/images/logo.png" class="max-w-2xl mx-auto py-16"/>
+                <ul class="text-center text-lg">
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary " href="home.html">Home</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="products.html">Products</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="projects.html">Projects</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--contact menu !-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl md:px-8 mx-auto">
+            <div class="relative lg:row-span-2">
+                <img src="../../assets/images/logo.png" alt="logo" class="relative md:w-full px-8 xs:px-16 md:mx-auto md:px-0 pt-16 z-10"/>
+            </div>
+            <div class="relative ml-[10%] h-fit-content lg:col-span-2 lg:col-start-2 md:mr-0 md:ml-auto mx-auto">
+                <div class="relative flex mx-auto z-10 md:pt-20 md:justify-end md:text-right md:w-full lg:justify-start lg:pt-[5.5rem] lg:text-left lg:w-full lg:mr-0">
+                    <ul class="">
+                        <li class="my-4 lg:inline">
+                            <a class="hover:text-secondary text-primary" href="#">
+                                <i class="fa fa-phone"></i>
+                                (868)-331-CSSL(2775)
+                            </a>
+                        </li>
+                        <li class="my-4 lg:inline lg:ml-4">
+                            <a class="hover:text-secondary text-primary" href="mailto:info@cssl.co">
+                                <i class="fa fa-envelope"></i>
+                                info@cssl.co
+                            </a>
+                        </li>
+                        <li class="inline lg:ml-4">
+                            <a href="#">
+                                <i class="fa fa-facebook hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                        <li class="inline ml-4">
+                            <a href="#">
+                                <i class="fa fa-instagram hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                        <li class="inline ml-4">
+                            <a href="#">
+                                <i class="fa fa-twitter hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--main menu !-->
+            <div class="flex mt-12 mx-auto md:col-span-2 lg:col-start-2 lg:mr-0 lg:mt-0">
+                <ul class="hidden text-white z-10 font-bold md:flex">
+                    <li class="text-base font-semibold ">
+                        <a class=" hover:text-primary " href="home.html">Home</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="products.html">Products</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="projects.html">Projects</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>

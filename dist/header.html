@@ -1,0 +1,30 @@
+<head><script defer src="base.bundle.js"></script><script defer src="header.bundle.js"></script></head><header>
+    <div x-data="{ atTop: false}" class="hidden fixed z-50 bg-white w-full md:block" @scroll.window="atTop = (window.pageYOffset > 20) ? true : false">
+        <div id="stickyHeader" x-show="atTop" class="flex px-12 py-4 md:block lg:mx-0 xl:pl-60 2xl:pl-96 bg-darkGrey">
+            <img class="inline-flex 3xl:w-[12.5%] 3xl:ml-40" src="../../assets/images/logoSmall.png"/>
+            <ul class="invisible text-white ml-4 font-bold md:visible md:inline-flex lg:ml-72 xl:ml-[20.5rem] xl:text-lg 2xl:ml-[29.5rem] 3xl:ml-[38rem]">
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="home.html">Home</a>
+                </li>
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="#">About Us</a>
+                </li>
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="#">Products</a>
+                </li>
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="#">Services</a>
+                </li>
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="#">Projects</a>
+                </li>
+                <li class="mx-2 3xl:mx-4">
+                    <a class=" hover:text-primary 3xl:text-3xl" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>    <div class="flex-col">
+        <img src="../../assets/images/pageTitle.jpg" class="absolute object-cover w-full h-full z-0"/>
+    </div>
+
+</header>

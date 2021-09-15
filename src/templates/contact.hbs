@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> HtmlHead }}
+</head>
+<body class="antialiased font-OpenSans">
+{{>Header }}
+<div class="relative z-10">
+    {{>pageTitle pageTitle="Contact Us" pageSubTitle="For all your shelving soloutions"}}
+
+    <!--google maps iframe !-->
+    <iframe class="w-full border-b-2 border-lightgray " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.174722951003!2d-61.38509038466627!3d10.643530764541705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3601946f982f11%3A0x1449e85b02bb79e5!2sCommercial%20Shelving%20%26%20Solutions%20Limited!5e0!3m2!1sen!2stt!4v1626740351195!5m2!1sen!2stt" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+    <!--contact container !-->
+    <div class="py-8 px-4 w-full bg-white lg:inline-flex lg:pt-32">
+        <div class="max-w-7xl md:px-8 lg:px-28 px-10 mx-auto lg:inline-flex">
+            <div class="lg:w-2/4">
+                <div class="flex">
+                    <span class=" hidden lg:flex lg:mt-8 lg:mr-8 flex-col h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+                    <h1 class="text-[20px] md:text-30px my-4 font-bold inline ">Get In Touch With Us</h1>
+                </div>
+                <p class="text-lightgray font-OpenSans mb-8 text-sm">Convenire gubergren vix. Habeo facete pri putent malu intellegam vixt vim prompta facia.</p>
+            </div>
+        
+            <div class="text-lightgray xl:ml-8 lg:w-2/4">
+                <div class="my-4">
+                    <div class="inline ">
+                    <i class="fa fa-map-marker text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline text-sm font-OpenSans"> Address: 7a Macoya Industrial Estate, Macoya, Trinidad WI</p>
+                </div>
+                <div class="my-4">
+                    <div class="inline ">
+                    <i class="fa fa-volume-control-phone text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline"> Phone:<a href="tel:+18686224131" class="hover:underline text-sm font-OpenSans"> +1 (868) 622 4131</a></p>
+                </div>
+                <div class=" my-4">
+                    <div class="inline">
+                    <i class="fa fa-envelope text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline"> Email:<a href="mailto:info@cssl.co" class="hover:underline text-sm font-OpenSans"> info@cssl.co</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--social media container !-->
+    <div class="text-center bg-white px-8 py-16 border-b-1 border-lightgray">
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-facebook hover:text-primary text-30px text-gray2"></i>
+        </a>
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-instagram hover:text-primary text-30px text-gray2"></i>
+        </a>
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-linkedin hover:text-primary text-30px text-gray2"></i>
+        </a>
+    </div>
+    <!--contact us container!-->
+    <div class="bg-white pt-20 w-full mx-auto">
+        <h1 class="text-OpenSans text-center text-[20px] pb-1 text-primary font-montserrat">Contact CSSL</h1>
+        <h1 class="text-OpenSans font-bold text-center text-[20px] md:text-4xl pb-1 ">Let's Talk About Your Project</h1>
+        <p class="center text-center px-2 max-w-5xl px-16 md:px-8 lg:px-28 mx-auto leading-8 text-sm text-darkGrey ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium dolor eos error et fugit hic incidunt maiores officiis pariatur, placeat voluptas. Alias autem consectetur culpa eveniet ex id minima nostrum perspiciatis quam reprehenderit. Fuga in officia possimus praesentium?</p>
+    </div>
+    <!--contact us form container!-->
+    <div class="shadow-bottomOnly">
+        <div class="max-w-7xl md:px-8 lg:px-8 mx-auto mb-1">
+            <form action="#" method="POST">
+                <div class="sm:rounded-md sm:overflow-hidden">
+                    <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+
+                    <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="name" id="name" placeholder="Name: " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="Email" id="Email" placeholder="EMail: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="service" id="service" placeholder="Service You're Interested in " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="phone" id="phone" placeholder="Phone: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6">
+                        <input required type="textarea" name="message" id="message" placeholder="Message: " autocomplete="street-address" class="bg-[#f4f4f4] mt-1 block w-full h-32 py-3 px-3 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="px-4 py-3 text-center sm:px-6">
+                    <button type="submit" class="h-12 pt-3 mb-4 font-Montserrat text-black font-bold bg-primary hover:bg-white hover:shadow hover:text-primary py-1 px-8 inline-flex justify-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ">
+                        SEND MESSAGE
+                    </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{{> Footer }}
+
+</body>
+</html>

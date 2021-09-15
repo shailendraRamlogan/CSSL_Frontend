@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    [[$ HtmlHead ]]
+</head>
+<body class="antialiased font-OpenSans">
+[[$Header ]]
+<div class="relative">
+[[$pageTitle pageTitle="Products"]]
+    <div class="bg-white">
+        <div x-data="{activeTab: 0}" class="max-w-7xl gap-10 mx-auto grid-cols-1 lg:grid grid-cols-3 grid-rows-11 px-8 py-24 leading-5">
+            
+            <!-- Left Column Start !-->
+            
+            <div class="col-span-1 lg:col-start-1 lg:col-end-2 row-start-1 py-16 px-4">
+                <h1 class="text-2xl font-bold capitalize mb-4 font-Montserrat">Categories</h1>
+                <span class="block absolute h-1 w-[3.5rem] text-primary bg-current" :class="{'opacity-0': open } "></span>
+                <div class="mt-16 leading-10">
+                    <button @click="activeTab = 1" class="block hover:text-primary text-base text-gray1">Shelving</button>
+                    <button @click="activeTab = 2" class="block hover:text-primary text-base text-gray1">Racking</button>
+                    <button @click="activeTab = 3" class="block hover:text-primary text-base text-gray1">Shelving Accessories</button>
+                    <button @click="activeTab = 4" class="block hover:text-primary text-base text-gray1">Product Application</button>
+                    <button @click="activeTab = 5" class="block hover:text-primary text-base text-gray1">Doors</button>
+                </div>
+            </div>
+            <div class="col-span-1 lg:col-start-1 lg:col-end-2 lg:row-start-2 row-span-2 py-16 px-4">
+                <h1 class="text-2xl font-bold capitalize mb-4 font-Montserrat">Featured Products</h1>
+                <span class="block absolute h-1 w-[3.5rem] text-primary bg-current" :class="{'opacity-0': open } "></span>
+                <div class="flex py-8 border-b-1 border-gray-300">
+                    <a href="#" class="inline text-base font-bold leading-7 capitalize hover:text-primary"><img class="w-[5rem] inline mr-4 hover:brightness-[.5] transition ease-in duration-250" src="../../assets/images/pushBackPalletRacking.jpg"/>Push-Back Pallet Racking</a>
+                </div>
+                <div class="flex py-8 border-b-1 border-gray-300">
+                    <a href="#" class="inline text-base font-bold leading-7 capitalize hover:text-primary"><img class="w-[5rem] inline mr-4 hover:brightness-[.5] transition ease-in duration-250" src="../../assets/images/selectivePalletRacking.jpg"/>Selective Pallet Racking</a>
+                </div>
+                <div class="flex py-8 border-b-1 border-gray-300">
+                    <a href="#" class="inline text-base font-bold leading-7 capitalize hover:text-primary"><img class="w-[5rem] inline mr-4 hover:brightness-[.5] transition ease-in duration-250" src="../../assets/images/slottedAngle.jpg"/>Slotted Angle Shelving</a>
+                </div>
+            </div>
+            
+            <!-- Left Column End !-->
+
+
+            <!-- Middle Column Start !-->
+            <div class="col-span-1 lg:col-span-2 lg:row-span-2 lg:col-start-2 grid grid-cols-2 grid-rows-11">
+                <!-- Default Tab Start !-->
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                        <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Slotted Angle Shelving</a>
+                        <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                        <p class="text-base text-gray3 font-normal">Designed to be a general purpose product, Dexion Slotted Angle is versatile and strong with near limitless application.…</p>
+                        <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/slottedAngle.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-2 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Warehousing</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-2 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/warehousing.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-3 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Selective Pallet Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Selective pallet racks are storage systems in which pallets containing goods are placed onto racks using forklifts or…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-3 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/selectivePalletRacking.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-4 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Supermarket</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-4 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/supermarket.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-5 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Rolling Service Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Service doors provide security against entry as well as protection from weather at exterior and interior openings in industrial…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-5 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/cornellServiceDoors.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-6 py-16 px-4">
+                    <a class="text-2xl block font-semibold leading-5 font-Montserrat hover:text-primary" href="#">File Storage</a>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-6 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/fileStorage.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-7 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Rolling Security Grille Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Rolling Security Grilles provide security against unwanted entry while still providing visibility and air flow. Grilles…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-7 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/fileStorage.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-8 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Push-Back Pallet Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Saves space and offers high storage density. Each level can store a different reference. Loading and unloading is done…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-8 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/pushBackPalletRacking.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-9 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Counter Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-basse text-gray3 font-normal">Counter doors are made from interlocking slats of formed steel, aluminum or stainless steel that will roll up to store…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-9 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/pushBackPalletRacking.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-10 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">P90 Multi Tier</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <p class="text-base text-gray3 font-normal">With Multi-tier Pallet Racking from Dexion, you can create manual pick-lanes for your teams at various levels, by providing…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 0" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-10 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/p90MultiTier.jpg"/></a>
+                </div>
+                <!-- Default tab end !-->
+                <!-- Tab 1 start !-->
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Slotted Angle Shelving</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <p class="text-base text-gray3 font-normal">Designed to be a general purpose product, Dexion Slotted Angle is versatile and strong with near limitless application.…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/slottedAngle.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-2 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">P90 Multi Tier</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <p class="text-base text-gray3 font-normal">With Multi-tier Pallet Racking from Dexion, you can create manual pick-lanes for your teams at various levels, by providing…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-2 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/p90MultiTier.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-3 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Mobile Shelving</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/bruynzeelLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Compactus is a mobile archive system that makes optimum use of available space. The system’s principle is cabinets on…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-3 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/mobileShelving.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-4 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">HI-280</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <p class="text-base text-gray3 font-normal">With integrated mezzanine, the Hi280 Multi-tier Shelving system is shelving constructed as two or more levels. Perfect…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 1" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-4 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/hi280.jpg"/></a>
+                </div>
+                <!-- Tab 1 end !-->
+                <!-- Tab 2 start !-->
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Selective Pallet Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Selective pallet racks are storage systems in which pallets containing goods are placed onto racks using forklifts or…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/selectivePalletRacking.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-2 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Push-Back Pallet Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Saves space and offers high storage density. Each level can store a different reference. Loading and unloading is done…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-2 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/pushBackPalletRacking.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-3 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Pallet Flow Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">To be provided by CSSL</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-3 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/palletFlow.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-4 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Drive-Thru Pallet Racking</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">With its minimal number of aisles, drive-in rack provides very dense storage and takes maximum advantage of available…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-4 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/driveIn.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-5 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Widespan Shelving</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Wide Span Shelving is used for hand stacking medium to heavy loads. It is designed for storage areas in which goods are…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 2" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-5 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/widespan.jpg"/></a>
+                </div>
+                <!-- Tab 2 end !-->
+                <!-- Tab 3 start !-->
+                <div x-show="activeTab === 3" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Maxi Bins</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/mecaluxLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Maxi Bins offer you versatile small parts storage and faster picking. Whatever your storage needs, you’ll find that Maxi…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 3" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/maxiBins.jpg"/></a>
+                </div>
+                <!-- Tab 3 end !-->
+                <!-- Tab 4 start !-->
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Warehousing</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/warehousing.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-2 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Supermarket</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/dexionLogo.png"/>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-2 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/supermarket.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-3 py-16 px-4">
+                    <a class="text-2xl block font-semibold leading-5 font-Montserrat hover:text-primary" href="#">File Storage</a>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 4" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-3 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/fileStorage.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Rolling Service Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Service doors provide security against entry as well as protection from weather at exterior and interior openings in industrial…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+                <!-- Tab 4 end !-->
+                <!-- Tab 5 start !-->
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/cornellServiceDoors.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-2 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Rolling Security Grille Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Rolling Security Grilles provide security against unwanted entry while still providing visibility and air flow. Grilles…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-2 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/fileStorage.jpg"/></a>
+                </div>
+
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-3 py-16 px-4">
+                    <a class="text-2xl font-semibold leading-5 font-Montserrat hover:text-primary" href="#">Counter Doors</a>
+                    <img class="w-24 pt-8 pb-6" src="../../assets/images/cornellLogo.jpg"/>
+                    <p class="text-base text-gray3 font-normal">Counter doors are made from interlocking slats of formed steel, aluminum or stainless steel that will roll up to store…</p>
+                    <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-1 my-8 px-4 border-[3px] border-primary hover:border-transparent rounded-full">Read More</button>
+                </div>
+
+                <div x-show="activeTab === 5" class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-3 py-16 px-4 hover:brightness-[.5] transition ease-in duration-250">
+                    <a href="#"><img class="w-full " src="../../assets/images/pushBackPalletRacking.jpg"/></a>
+                </div>
+                <!-- Tab 5 end !-->
+            </div>
+                <!-- pagination start !-->
+
+                <div x-show="activeTab === 0" class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center lg:justify-between lg:col-start-2 lg:col-end-3 lg:row-start-3 px-4">
+                        
+                    <div class="col-span-1">
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Previous</span>
+                            <!-- Heroicon name: solid/chevron-left -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            </a>
+                            <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                            <a href="#" aria-current="page" class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            1
+                            </a>
+                            <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            2
+                            </a>
+                            <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                            ...
+                            </span>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Next</span>
+                            <!-- Heroicon name: solid/chevron-right -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <!-- pagination end !-->
+
+                <!-- Middle Column end !-->
+
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+</div>
+
+[[$ Footer ]]
+
+</body>
+</html>
+

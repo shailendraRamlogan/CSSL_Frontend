@@ -1,0 +1,19 @@
+{
+  "base.js": "js/base.6271330adfe7a5cbdfec.bundle.js",
+  "entryPoints": {
+    "home": {
+      "assets": {
+        "js": [
+          "js/base.6271330adfe7a5cbdfec.bundle.js",
+          "js/home.2a5d1ee5c15a291e2cac.bundle.js"
+        ],
+        "css": [
+          "css/home.[contentHash].css"
+        ]
+      }
+    }
+  },
+  "home.css": "css/home.[contentHash].css",
+  "home.html": "home.html",
+  "home.js": "js/home.2a5d1ee5c15a291e2cac.bundle.js"
+}

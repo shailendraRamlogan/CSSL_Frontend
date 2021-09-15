@@ -1,0 +1,133 @@
+<header>
+    {{>stickyHeader}}
+    <div class="flex-col">
+        <div x-data="header()" x-init="init()" class="col-span-5 lg:col-span-2 lg:row-span-4 h-full">
+                <div class="headerSlider ">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides h-[40rem] md:h-[50rem]">
+                        <!--glide slide-->
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center cursor-pointer h-full md:flex-row">
+                                <div class="text-white w-full h-full absolute">
+                                    <img src="../../assets/images/storage-solution-1.jpg" class="object-cover h-full w-1/2 filter brightness-[1]"/>
+                                </div>
+                                <div class="relative"><!--
+                                    <div class="relative mx-auto md:hidden mt-12" x-data="{hamOpen: false}">
+                                        <div class=" max-w-7xl mx-auto">
+                                        <nav class="absolute top-0 z-30 left-4"> 
+                                            <button class="w-14 focus:outline-none bg-transparent rounded" @click="hamOpen= !hamOpen">
+                                                <div class="block w-5 absolute left-6 top-6 transform -translate-x-1/2 -translate-y-1/2"> 
+                                                    <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': hamOpen,' -translate-y-1.5': !hamOpen }"></span> 
+                                                    <span class="block absolute h-0.5 w-5 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': hamOpen } "></span> 
+                                                    <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': hamOpen, ' translate-y-1.5': !hamOpen}"></span> 
+                                                </div>
+                                            </button> 
+                                        </nav>
+                                        </div>
+                                        <div x-show="hamOpen" @click.away="hamOpen = !hamOpen" class="bg-white fixed w-screen h-screen z-20 top-0">
+                                            <img src="../../assets/images/logo.png" class="max-w-2xl mx-auto py-8"/>
+                                            <ul class="text-center text-lg">
+                                                <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                                                    <a @click="hamOpen = !hamOpen" class=" hover:text-primary " href="home.html">Home</a>
+                                                </li>
+                                                <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                                                    <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                                                </li>
+                                                <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                                                    <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="products.html">Products</a>
+                                                </li>
+                                                <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                                                    <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="projects.html">Projects</a>
+                                                </li>
+                                                <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                                                    <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="contact.html">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>!-->
+                                    <!--contact menu !-->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mt-20 md:mt-0 md:px-8 mx-auto">
+                                        <div class="relative lg:row-span-2">
+                                            <img src="../../assets/images/logo.png" alt="logo" class="relative md:w-full px-8  md:mx-auto md:px-0 md:pt-16 z-10"/>
+                                        </div>
+                                        <div class="relative ml-8  h-fit-content lg:col-span-2 lg:col-start-2 md:mr-0 md:ml-auto mx-auto">
+                                            <div class="relative flex w-full mx-auto z-10 md:pt-20 md:justify-end md:text-right md:w-full lg:justify-start lg:pt-[5.5rem] lg:text-left lg:w-full lg:mr-0">
+                                                <ul class="w-full">
+                                                    <li class="my-4 lg:inline">
+                                                        <a class="hover:text-secondary text-primary" href="#">
+                                                            <i class="fa fa-phone"></i>
+                                                            (868)-331-CSSL(2775)
+                                                        </a>
+                                                    </li>
+                                                    <li class="my-4 lg:inline lg:ml-4">
+                                                        <a class="hover:text-secondary text-primary" href="mailto:info@cssl.co">
+                                                            <i class="fa fa-envelope"></i>
+                                                            info@cssl.co
+                                                        </a>
+                                                    </li>
+                                                    <li class="inline lg:ml-4">
+                                                        <a href="#">
+                                                            <i class="fa fa-facebook hover:text-secondary text-primary"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="inline ml-4">
+                                                        <a href="#">
+                                                            <i class="fa fa-instagram hover:text-secondary text-primary"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="inline ml-4">
+                                                        <a href="#">
+                                                            <i class="fa fa-twitter hover:text-secondary text-primary"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!--main menu !-->
+                                        <div class="flex mt-12 mx-auto md:col-span-2 lg:col-start-2 lg:mr-0 lg:mt-0">
+                                            <ul class="hidden text-white z-10 font-bold md:flex">
+                                                <li class="text-base font-semibold ">
+                                                    <a class=" hover:text-primary " href="home.html">Home</a>
+                                                </li>
+                                                <li class="text-base font-semibold ml-4 ">
+                                                    <a class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                                                </li>
+                                                <li class="text-base font-semibold ml-4 ">
+                                                    <a class=" hover:text-primary" href="products.html">Products</a>
+                                                </li>
+                                                <li class="text-base font-semibold ml-4 ">
+                                                    <a class=" hover:text-primary" href="projects.html">Projects</a>
+                                                </li>
+                                                <li class="text-base font-semibold ml-4 ">
+                                                    <a class=" hover:text-primary" href="contact.html">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="md:mt-12 px-8 md:pl-0 mx-auto md:col-span-3 w-full md:py-16 lg:mr-0 lg:mt-0 z-10">
+                                            <h1 class="flex text-white text-xl md:text-6xl mb-12 md:mb-0 font-bold font-Montserrat leading-10 md:leading-[4rem] font-Montserrat block md:py-8">Optimize<br> your workspace</h1>
+                                            <h1 class="text-lg md:text-xl font-normal capitalize inline-block text-white">with a custom soloution from CSSL<span class="inline-block mt-3 ml-1 absolute h-0.5 w-10 text-primary bg-current" ></span></h1>
+                                            <button type="submit" class="h-12 my-16 font-Montserrat text-black font-bold bg-primary hover:bg-white hover:shadow hover:text-primary py-1 px-8 block justify-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 "><a href="home.html">Learn More</a></button>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--glide slide end-->
+                    </div>
+                    <!--glide__slides end-->
+                    
+                </div>
+                <!--glide__track end-->
+                <div class="glide__arrows absolute w-full mt-[-22rem] md:mt-[-28rem] px-2 justify-between flex" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fa fa-arrow-circle-left text-[#F1F1F1] text-2xl" aria-hidden="true"></i></button>
+                    <button class="glide__arrow glide__arrow--right inline" data-glide-dir=">"><i class="fa fa-arrow-circle-right text-[#F1F1F1] text-2xl" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            </div>
+        <!--hamburger menu !-->
+        
+    </div>
+</header>

@@ -1,0 +1,104 @@
+<div x-data="mainslider()"
+     x-init="init()"
+     id="slider"
+     class="swiper-container relative inset-0 w-full z-10"
+>
+    <!--Swiper wrapper start-->
+    <div class="swiper-wrapper relative z-1">
+
+        <!--swiper-slide start-->
+        <div class="swiper-slide relative">
+            <div class="relative shadow-xl sm:overflow-hidden">
+                <div class="absolute inset-0">
+                    <img class="w-full h-full object-cover"
+                         src="../../assets/images/pageTitle.jpg"
+                         alt="People working on laptops">
+                    <div class="absolute z-0 inset-0 w-full h-full bg-black bg-opacity-30"></div>
+                </div>
+                <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-24 lg:py-64 xl:py-52 lg:px-8">
+                    <h2 class="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-9xl">
+                            <span class="block text-white capitalize"
+                                  :class="{'animate__animated animate__fadeInUp animate__delay-2 animate__slow' : active == 0}"
+                            >glass</span>
+                    </h2>
+                    <h3
+                            class="mt-3 text-2xl sm:text-3xl font-bold text-white sm:max-w-3xl"
+                            :class="{'animate__animated animate__fadeInDown animate__delay-3 animate__slow' : active == 0}"
+                    >
+                        Restoration at its finest
+                    </h3>
+                    <div class="mt-10 w-64 sm:max-w-none">
+                        <div>
+                            <a href="#"
+                               class="bg-blue-500 font-medium inline-flex items-center font-AlegreyaSans px-7 py-4 text-lg font-mediumshadow-sm text-white hover:bg-opacity-70 sm:px-8"
+                               :class="{'animate__animated animate__fadeInDown animate__delay-3 animate__slow' : active == 0}"
+                            >
+                                <svg class="w-5 h-7 text-white mr-3" fill="none" stroke="currentColor" stroke-width="4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g class="nc-icon-wrapper" stroke-linecap="square" stroke="currentColor" fill="none" stroke-miterlimit="10"><path data-cap="butt" stroke-linecap="butt" d="M3 32h58"/><path d="M43 14l18 18-18 18"/></g></svg>
+                                Make Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--swiper slide end-->
+
+        <!--swiper-slide start-->
+        <div class="swiper-slide relative">
+            <div class="relative shadow-xl sm:overflow-hidden">
+                <div class="absolute inset-0">
+                    <img class="w-full h-full object-cover"
+                         src="../../assets/images/pageTitle.jpg"
+                         alt="People working on laptops">
+                    <div class="absolute z-0 inset-0 w-full h-full bg-black bg-opacity-30"></div>
+                </div>
+                <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-24 lg:py-64 xl:py-52 lg:px-8">
+                    <h2 class="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-9xl">
+                            <span class="block text-white capitalize"
+                                  :class="{'animate__animated animate__fadeInUp animate__delay-2 animate__slow' : active == 1}"
+                            >glass</span>
+                    </h2>
+                    <h3
+                            class="mt-3 text-2xl sm:text-3xl font-bold text-white sm:max-w-3xl"
+                            :class="{'animate__animated animate__fadeInDown animate__delay-3 animate__slow' : active == 1}"
+                    >
+                        Restoration at its finest
+                    </h3>
+                    <div class="mt-10 w-64 sm:max-w-none">
+                        <div>
+                            <a href="#"
+                               class="bg-blue-500 font-medium inline-flex items-center font-AlegreyaSans px-7 py-4 text-lg font-mediumshadow-sm text-white hover:bg-opacity-70 sm:px-8"
+                               :class="{'animate__animated animate__fadeInDown animate__delay-3 animate__slow' : active == 1}"
+                            >
+                                <svg class="w-5 h-7 text-white mr-3" fill="none" stroke="currentColor" stroke-width="4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g class="nc-icon-wrapper" stroke-linecap="square" stroke="currentColor" fill="none" stroke-miterlimit="10"><path data-cap="butt" stroke-linecap="butt" d="M3 32h58"/><path d="M43 14l18 18-18 18"/></g></svg>
+                                Make Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--swiper slide end-->
+
+    </div>
+    <!--Swiper wrapper end-->
+
+    <!-- If we need navigation buttons -->
+    <div
+            class="swipercustom-button-prev absolute top-1/2 h-10 w-10 z-10 text-gray-100 cursor-pointer">
+        <svg fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 48 48">
+            <path stroke-miterlimit="10" d="M31 3L17 24l14 21" stroke-linecap="square"
+                  stroke="currentColor"/>
+        </svg>
+    </div>
+    <div
+            class="swipercustom-button-next absolute top-1/2 right-0 h-10 w-10 z-10 text-gray-100 cursor-pointer">
+        <svg fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 48 48">
+            <path stroke-miterlimit="10" d="M17 3l14 21-14 21" stroke-linecap="square"
+                  stroke="currentColor"/>
+        </svg>
+    </div>
+
+</div>

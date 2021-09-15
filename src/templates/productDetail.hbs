@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> HtmlHead }}
+</head>
+<body class="antialiased font-OpenSans">
+{{>Header }}
+<div class="relative">
+{{>pageTitle pageTitle="Product Detail"}}
+
+<div class="bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="px-8 py-16 grid grid-cols-5">
+            <div x-data="testimonial()" x-init="init()" class="col-span-5 lg:col-span-2 lg:row-span-4 pr-16 h-full">
+                <div class="testimonials ">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides h-64">
+                        <!--glide slide-->
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="text-white w-full max-w-2xl">
+                                    <div class="font-OpenSans text-lg mb-96 text-gray-100">
+                                        <img src="../../assets/images/glideCarouselA.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="text-white w-full max-w-2xl">
+                                    <div class="font-OpenSans text-lg mb-96 text-gray-100">
+                                        <img src="../../assets/images/glideCarouselB.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="text-white w-full max-w-2xl">
+                                    <div class="font-OpenSans text-lg mb-96 text-gray-100">
+                                        <img src="../../assets/images/glideCarouselC.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="text-white w-full max-w-2xl">
+                                    <div class="font-OpenSans text-lg text-gray-100">
+                                        <img src="../../assets/images/glideCarouselD.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--glide slide end-->
+                    </div>
+                    <!--glide__slides end-->
+                    
+                </div>
+                <!--glide__track end-->
+                <div class="glide__arrows absolute w-[26.5rem] -mt-36 px-2 space-x-[22.5rem]" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fa fa-arrow-circle-left text-[#F1F1F1] text-2xl" aria-hidden="true"></i></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fa fa-arrow-circle-right text-[#F1F1F1] text-2xl" aria-hidden="true"></i></button>
+                </div>
+                <div class="glide__bullets text-left h-12 py-4" data-glide-el="controls[nav]">
+                    <button class="glide__bullet " data-glide-dir="=0"><img class="w-16 h-8 hover:rounded" src="../../assets/images/glideCarouselA.jpg"></button>
+                    <button class="glide__bullet " data-glide-dir="=1"><img class="w-16 h-8 hover:rounded" src="../../assets/images/glideCarouselB.jpg"></button>
+                    <button class="glide__bullet " data-glide-dir="=2"><img class="w-16 h-8 hover:rounded" src="../../assets/images/glideCarouselC.jpg"></button>
+                    <button class="glide__bullet " data-glide-dir="=3"><img class="w-16 h-8 hover:rounded" src="../../assets/images/glideCarouselD.jpg"></button>
+                </div>
+            </div>
+            </div>
+            <div class="col-span-5 lg:col-span-3">
+                <h1 class="font-bold capitalize text-4xl">Slotted Angle Shelving</h1>
+            </div>
+            <div class="col-span-1 col-start-1 lg:col-span-2 lg:col-start-3 py-8">
+                <i class="fa fa-check-circle-o text-[#3cb371]" aria-hidden="true"></i>
+                <p class="text-[#3cb371] inline font-bold">In Stock</p>
+            </div>
+            <div class="col-span-1 col-start-5 lg:col-span-2 lg:col-start-5 py-8 ml-auto mr-0">
+                <img src="../../assets/images/dexionLogo.png" class="w-24 col-start-5 inline "/>
+            </div>
+            <div class="col-span-5 lg:col-span-3 lg:col-start-3">
+                <p class="leading-8 text-base font-normal text-[#777777]">Designed to be a general purpose product, Dexion Slotted Angle is versatile and strong with near limitless application. Whether it is used to build specialist shelving, racks, trolleys, benches, or support frameworks, it gets the right angle on every job.</p>
+                <p class="leading-8 text-base font-normal text-[#777777] pt-4">The lengths are easy to cut and bolted together for the quick construction of frameworks that can be readily modified or completely dismantled and the components re-used.Dexion offers something for everyone.</p>
+                <p class="leading-8 text-base font-normal text-[#777777] pt-4">From a single shelving bay, to whether your facility operates to a multi-tier system. Dexion’s wide selection of shelving systems are perfect for small-parts storage to larger capacity shelving storage systems and picking areas.making for a world-class blend of performance, security and economy, all while complying with safe working practices and local requirements and regulations.</p>
+            </div>
+
+            <div class="col-span-5">
+                <h1 class="text-[18px] text-primary font-semibold uppercase text-center py-16">Related Products</h1>
+                <div class="space-x-2 lg:flex">
+                    <a class="w-84" href="#"><img class="py-10 mx-auto lg:mx-0 lg:py-0" src="../../assets/images/mobileShelving.jpg"/></a>
+                    <a class="w-84 lg:inline" href="#"><img class="py-10 mx-auto lg:mx-0 lg:py-0" src="../../assets/images/p90MultiTier.jpg"/></a>
+                    <a class="w-84 lg:inline" href="#"><img class="py-10 mx-auto lg:mx-0 lg:py-0" src="../../assets/images/hi280.jpg"/></a>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-[18px] text-primary font-semibold uppercase text-center py-16">Order or enquire about this product</h1>
+        <div>
+            <div class="max-w-6xl md:px-8 lg:px-8 mx-auto mb-1">
+                <form action="#" method="POST">
+                    <div class="sm:rounded-md sm:overflow-hidden">
+                        <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-6 sm:col-span-3">
+                            <input required type="text" name="name" id="name" placeholder="Name: " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                            <input required type="text" name="Email" id="Email" placeholder="EMail: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                            <input required type="text" name="service" id="service" placeholder="Product You're Interested in " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                            <input required type="text" name="phone" id="phone" placeholder="Phone: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                            </div>
+
+                            <div class="col-span-6">
+                            <input required type="textarea" name="message" id="message" placeholder="Message: " autocomplete="street-address" class="bg-[#f4f4f4] mt-1 block w-full h-32 py-3 px-3 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="px-4 py-3 text-center sm:px-6">
+                        <button type="submit" class="h-12 pt-3 mb-4 font-Montserrat text-black font-bold bg-primary hover:bg-white hover:shadow hover:text-primary py-1 px-8 inline-flex justify-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ">
+                            SEND MESSAGE
+                        </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+{{> Footer }}
+</body>
+</html>
+

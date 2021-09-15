@@ -1,0 +1,27 @@
+<div class="accordion accordion-lg divcenter nobottommargin clearfix" style="max-width: 550px;">
+    <div class="[[+errors:notempty=`style-msg errormsg`]]">
+        <div class="sb-msg">[[+loginfp.errors]]</div>
+    </div>
+    <div class="acctitle">Lets help you retrieve your password</div>
+    <div class="acc_content clearfix">
+        <form id="login-form" name="login-form" class="nobottommargin" action="[[~[[*id]]]]" method="post">
+            <div class="col_full">
+                <label for="login-form-username">[[%login.username]]</label>
+                <input type="text" id="login-form-username" name="username" value="[[+loginfp.post.username]]" class="form-control" />
+            </div>
+
+            <p>[[%login.or_forgot_username]]</p>
+
+            <div class="col_full">
+                <label for="email">[[%login.email]]</label>
+                <input type="text" id="email" name="email" class="form-control" value="[[+loginfp.post.email]]" />
+                <input class="returnUrl" type="hidden" name="returnUrl" value="[[+loginfp.request_uri]]" />
+            </div>
+
+            <div class="col_full nobottommargin">
+                <input class="loginFPService" type="hidden" name="login_fp_service" value="forgotpassword" />
+                <input class="button button-3d button-black nomargin" id="login-form-submit" type="submit" name="login_fp" value="[[%login.reset_password]]"/>
+            </div>
+        </form>
+    </div>
+</div>

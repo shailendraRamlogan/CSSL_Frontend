@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logoSmall.png">
+    <title>CSSL</title>
+<script defer src="base.bundle.js"></script><script defer src="contact.bundle.js"></script></head>
+<body class="antialiased font-OpenSans">
+<header>
+    <div x-data="{ atTop: false}" class="hidden fixed z-50 bg-white w-full md:block" @scroll.window="atTop = (window.pageYOffset > 20) ? true : false">
+        <div id="stickyHeader" x-show="atTop" class="flex py-4 md:block bg-darkGrey">
+            <div class="max-w-7xl mx-auto  grid grid-cols-6">
+                <a class="col-span-1 col-start-1 mx-auto" href="home.html"><img class="inline-flex" src="../../assets/images/logoSmall.png"/></a>
+                <ul class="invisible text-white font-bold md:visible md:inline-flex col-span-5 col-start-2 2xl:col-span-5 2xl:col-start-2 my-auto w-[100%] justify-end">
+                    <li class="mx-2">
+                        <a class=" hover:text-primary" href="home.html">Home</a>
+                    </li>
+                    <li class="mx-2">
+                        <a class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="mx-2">
+                        <a class=" hover:text-primary" href="products.html">Products</a>
+                    </li>
+                    <li class="mx-2">
+                        <a class=" hover:text-primary" href="projects.html">Projects</a>
+                    </li>
+                    <li class="mx-2">
+                        <a class=" hover:text-primary" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>    <div class="flex-col">
+        <img src="../../assets/images/pageTitle.jpg" class="absolute object-cover filter brightness-[.3] w-full h-full z-0"/>
+        <!--hamburger menu !-->
+        <div class="relative mx-auto md:hidden " x-data="{hamOpen: false}">
+            <div class=" max-w-7xl mx-auto">
+            <nav class="absolute top-0 z-30 left-4"> 
+                <button class="w-14 focus:outline-none bg-transparent rounded" @click="hamOpen= !hamOpen">
+                    <div class="block w-5 absolute left-6 top-6 transform -translate-x-1/2 -translate-y-1/2"> 
+                        <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': hamOpen,' -translate-y-1.5': !hamOpen }"></span> 
+                        <span class="block absolute h-0.5 w-5 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': hamOpen } "></span> 
+                        <span class="block absolute h-0.5 w-7 text-primary bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': hamOpen, ' translate-y-1.5': !hamOpen}"></span> 
+                    </div>
+                </button> 
+            </nav>
+            </div>
+            <div x-show="hamOpen" @click.away="hamOpen = !hamOpen" class="bg-white fixed w-screen h-screen z-20 top-0">
+                <img src="../../assets/images/logo.png" class="max-w-2xl mx-auto py-16"/>
+                <ul class="text-center text-lg">
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary " href="home.html">Home</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="products.html">Products</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="projects.html">Projects</a>
+                    </li>
+                    <li class=" border-b-1 border-lightgray py-4 hover:text-primary font-light">
+                        <a @click="hamOpen = !hamOpen" class=" hover:text-primary" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--contact menu !-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl md:px-8 mx-auto">
+            <div class="relative lg:row-span-2">
+                <img src="../../assets/images/logo.png" alt="logo" class="relative md:w-full px-8 xs:px-16 md:mx-auto md:px-0 pt-16 z-10"/>
+            </div>
+            <div class="relative ml-[10%] h-fit-content lg:col-span-2 lg:col-start-2 md:mr-0 md:ml-auto mx-auto">
+                <div class="relative flex mx-auto z-10 md:pt-20 md:justify-end md:text-right md:w-full lg:justify-start lg:pt-[5.5rem] lg:text-left lg:w-full lg:mr-0">
+                    <ul class="">
+                        <li class="my-4 lg:inline">
+                            <a class="hover:text-secondary text-primary" href="#">
+                                <i class="fa fa-phone"></i>
+                                (868)-331-CSSL(2775)
+                            </a>
+                        </li>
+                        <li class="my-4 lg:inline lg:ml-4">
+                            <a class="hover:text-secondary text-primary" href="mailto:info@cssl.co">
+                                <i class="fa fa-envelope"></i>
+                                info@cssl.co
+                            </a>
+                        </li>
+                        <li class="inline lg:ml-4">
+                            <a href="#">
+                                <i class="fa fa-facebook hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                        <li class="inline ml-4">
+                            <a href="#">
+                                <i class="fa fa-instagram hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                        <li class="inline ml-4">
+                            <a href="#">
+                                <i class="fa fa-twitter hover:text-secondary text-primary"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--main menu !-->
+            <div class="flex mt-12 mx-auto md:col-span-2 lg:col-start-2 lg:mr-0 lg:mt-0">
+                <ul class="hidden text-white z-10 font-bold md:flex">
+                    <li class="text-base font-semibold ">
+                        <a class=" hover:text-primary " href="home.html">Home</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="products.html">Products</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="projects.html">Projects</a>
+                    </li>
+                    <li class="text-base font-semibold ml-4 ">
+                        <a class=" hover:text-primary" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+<div class="relative z-10">
+    <div class="py-8 max-w-7xl px-8 xs:px-12 sm:px-16 md:px-8 xl:mx-auto mx-auto relative">
+        <h1 class="text-white text-5xl font-bold font-Montserrat py-8">Contact Us</h1>
+        <h1 class="text-white text-lg font-bold font-Montserrat py-4">For all your shelving soloutions</h1>
+        <a class="text-primary" href="home.html">Home</a>
+        <p class="inline text-white">/ Contact Us</p>
+    </div>
+    <!--google maps iframe !-->
+    <iframe class="w-full border-b-2 border-lightgray " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.174722951003!2d-61.38509038466627!3d10.643530764541705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3601946f982f11%3A0x1449e85b02bb79e5!2sCommercial%20Shelving%20%26%20Solutions%20Limited!5e0!3m2!1sen!2stt!4v1626740351195!5m2!1sen!2stt" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+    <!--contact container !-->
+    <div class="py-8 px-4 w-full bg-white lg:inline-flex lg:pt-32">
+        <div class="max-w-7xl md:px-8 lg:px-28 px-10 mx-auto lg:inline-flex">
+            <div class="lg:w-2/4">
+                <div class="flex">
+                    <span class=" hidden lg:flex lg:mt-8 lg:mr-8 flex-col h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+                    <h1 class="text-[20px] md:text-30px my-4 font-bold inline ">Get In Touch With Us</h1>
+                </div>
+                <p class="text-lightgray font-OpenSans mb-8 text-sm">Convenire gubergren vix. Habeo facete pri putent malu intellegam vixt vim prompta facia.</p>
+            </div>
+        
+            <div class="text-lightgray xl:ml-8 lg:w-2/4">
+                <div class="my-4">
+                    <div class="inline ">
+                    <i class="fa fa-map-marker text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline text-sm font-OpenSans"> Address: 7a Macoya Industrial Estate, Macoya, Trinidad WI</p>
+                </div>
+                <div class="my-4">
+                    <div class="inline ">
+                    <i class="fa fa-volume-control-phone text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline"> Phone:<a href="tel:+18686224131" class="hover:underline text-sm font-OpenSans"> +1 (868) 622 4131</a></p>
+                </div>
+                <div class=" my-4">
+                    <div class="inline">
+                    <i class="fa fa-envelope text-primary w-[10px] mr-2"></i>
+                    </div>
+                    <p class="inline"> Email:<a href="mailto:info@cssl.co" class="hover:underline text-sm font-OpenSans"> info@cssl.co</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--social media container !-->
+    <div class="text-center bg-white px-8 py-16 border-b-1 border-lightgray">
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-facebook hover:text-primary text-30px text-gray2"></i>
+        </a>
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-instagram hover:text-primary text-30px text-gray2"></i>
+        </a>
+        <a class="font-bold text-lg mx-4 md:mx-16" href="#">
+            <i class="fa fa-linkedin hover:text-primary text-30px text-gray2"></i>
+        </a>
+    </div>
+    <!--contact us container!-->
+    <div class="bg-white pt-20 w-full mx-auto">
+        <h1 class="text-OpenSans text-center text-[20px] pb-1 text-primary font-montserrat">Contact CSSL</h1>
+        <h1 class="text-OpenSans font-bold text-center text-[20px] md:text-4xl pb-1 ">Let's Talk About Your Project</h1>
+        <p class="center text-center px-2 max-w-5xl px-16 md:px-8 lg:px-28 mx-auto leading-8 text-sm text-darkGrey ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium dolor eos error et fugit hic incidunt maiores officiis pariatur, placeat voluptas. Alias autem consectetur culpa eveniet ex id minima nostrum perspiciatis quam reprehenderit. Fuga in officia possimus praesentium?</p>
+    </div>
+    <!--contact us form container!-->
+    <div class="shadow-bottomOnly">
+        <div class="max-w-7xl md:px-8 lg:px-8 mx-auto mb-1">
+            <form action="#" method="POST">
+                <div class="sm:rounded-md sm:overflow-hidden">
+                    <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+
+                    <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="name" id="name" placeholder="Name: " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="Email" id="Email" placeholder="EMail: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="service" id="service" placeholder="Service You're Interested in " autocomplete="given-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                        <input required type="text" name="phone" id="phone" placeholder="Phone: " autocomplete="family-name" class="bg-[#f4f4f4] mt-1 block w-full h-12 xl:h-16 py-3 px-3 border-0 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+
+                        <div class="col-span-6">
+                        <input required type="textarea" name="message" id="message" placeholder="Message: " autocomplete="street-address" class="bg-[#f4f4f4] mt-1 block w-full h-32 py-3 px-3 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm ">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="px-4 py-3 text-center sm:px-6">
+                    <button type="submit" class="h-12 pt-3 mb-4 font-Montserrat text-black font-bold bg-primary hover:bg-white hover:shadow hover:text-primary py-1 px-8 inline-flex justify-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ">
+                        SEND MESSAGE
+                    </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<footer class="relative bg-darkGrey font-OpenSans text-white text-xs pt-8 mb-0 text-center " aria-labelledby="footerHeading">
+    <div class=" grid pb-8 px-4 mx-auto max-w-7xl md:grid-cols-2 lg:grid-cols-4">
+        <div class="px-2 lg:px-8">
+        <ul class="pt-8 mb-8 flex">
+            <li class="">
+                <a class="text-primary font-bold text-lg" href="#">
+                    <i class="fa fa-pinterest hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-linkedin hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-facebook hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-instagram hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-twitter hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="text-[#bbbbbb] text-base font-OpenSans leading-8 flex mt-2 text-left"> Our Trust is concentrated on supplying solutions for warehouses and industrial complexes throughout Trinidad and the Caribbean Region </p>
+        <br>
+        <p class="text-[#bbbbbb] text-sm font-OpenSans leading-8 flex mt-2 text-left pb-8"> CSSL - Commercial Shelving & Solutions Ltd © All rights reserved. </p>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">What we do</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base leading-8 mt-2">
+                <li>
+                    <a class="hover:text-white " href="#"> Mobile Shelving Units</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Pallet Racking Systems</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Mezzannine Floors</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> MH Pallet Trucks</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Rolling Ladders</a>
+                </li>
+                <li>
+                    <a class="" href="#"> Warehousing Fabric Shelters</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">Sitemap</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base mt-2 leading-8 ">
+                <li>
+                    <a class="hover:text-white" href="#"> Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> About</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Products</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Projects</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Services</a>
+                </li>
+                <li>
+                    <a class="" href="#"> Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">Contact</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base mt-2 leading-8">
+                <li>
+                    <p class="">Address: </p>
+                    <p class="text-white text-80per ">7a Macoya Industrial Estate, Macoya, Trinidad W.I</p>
+                </li>
+                <li>
+                    <p class="">Phone: </p>
+                    <a class="hover:underline text-white" href="tel:+18686224131"> +1 (868) 622 4131</a>
+                </li>
+                <li>
+                    <p class="">Email: </p>
+                    <a class="hover:underline text-white " href="mailto:info@cssl.co"> Info@cssl.co </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <img class="filter brightness-[.3] w-full" src="../../assets//images/footer-bg.jpg"/>
+
+    <div x-data="{ attop: false}" @scroll.window="attop = (window.pageYOffset > 400) ? true : false">
+    <button x-show="attop" @click="window.scrollTo(0,0)"class="fixed bottom-[1rem] right-[1rem] text-lg bg-primary text-white cursor-pointer py-[10px] px-[15px] z-50" title="Go to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    </div>
+</footer>
+</body>
+</html>

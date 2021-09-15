@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+_backup/
+assets/components/
+config.core.php
+index.php
+ht.access
+setup/
+notes.txt
+README.md

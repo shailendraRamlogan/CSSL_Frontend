@@ -1,0 +1,43 @@
+<br><br>
+<div class="register">
+    <div class="registerMessage">[[!+reg.error.message]]</div>
+
+    <form id="register" class="form" action="[[~[[*id]]]]" method="post">
+        <input type="hidden" name="nospam" value="[[!+reg.nospam]]" />
+
+        <div class="col_half">
+            <label for="username">[[%register.username? &namespace=`login` &topic=`register`]]</label>
+            <input type="text" id="username" name="username" value="[[!+reg.username]]" class="form-control" />
+        </div>
+
+        <div class="col_half">
+            <label for="password">[[%register.password]]</label>
+                <span class="error">[[!+reg.error.password]]</span>
+        <input type="password" name="password" id="password" value="[[!+reg.password]]" class="form-control" />
+        </div>
+
+        <div class="col_half">
+            <label for="password_confirm">[[%register.password_confirm]]</label>
+            <span class="error">[[!+reg.error.password_confirm]]</span>
+        <input type="password" name="password_confirm" id="password_confirm" value="[[!+reg.password_confirm]]"   class="form-control"/>
+        </div>
+
+        <div class="col_half">
+            <label for="fullname">[[%register.fullname]]</label>
+            <span class="error">[[!+reg.error.fullname]]</span>
+            <input type="text" name="fullname" id="fullname" value="[[!+reg.fullname]]"   class="form-control"/>
+        </div>
+
+        <div class="col_half">
+            <label for="email">[[%register.email]]</label>
+                <span class="error">[[!+reg.error.email]]</span>
+            <input type="text" name="email" id="email" value="[[!+reg.email]]"  class="form-control" />
+        </div>
+
+        <br class="clear" />
+
+        <div class="col_full nobottommargin">
+            <input type="submit" class="button button-3d button-black nomargin" name="registerbtn" value="Register"/>
+        </div>
+    </form>
+</div>

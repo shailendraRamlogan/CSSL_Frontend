@@ -1,0 +1,29 @@
+<div class="accordion accordion-lg nobottommargin clearfix" style="max-width: 550px;">
+    <div class="[[+errors:notempty=`style-msg errormsg`]]">
+        <div class="sb-msg">[[+errors]]</div>
+    </div>
+    <div class="acctitle"><i class="acc-closed icon-lock3"></i><i class="acc-open icon-unlock"></i>Login to your Account</div>
+    <div class="acc_content clearfix">
+        <form id="login-form" name="login-form" class="nobottommargin" action="[[~[[*id]]]]" method="post">
+            <div class="col_full">
+                <label for="login-form-username">[[%login.username]]</label>
+                <input type="text" id="login-form-username" name="username" value="" class="form-control" />
+            </div>
+
+            <div class="col_full">
+                <label for="login-form-password">[[%login.password]]</label>
+                <input type="password" id="login-form-password" name="password" class="form-control" />
+                <input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
+                [[+login.recaptcha_html]]
+            </div>
+
+            <div class="col_full nobottommargin">
+                <input class="loginLoginValue" type="hidden" name="service" value="login" />
+                <input class="button button-3d button-black nomargin" id="login-form-submit" type="submit" name="Login" value="[[+actionMsg]]"/>
+                <a href="[[~143]]" class="fright">Forgot Password?</a>
+            </div>
+        </form>
+        <br>
+        <div class="acctitle1"><a href="[[~50]]" >New Signup here?</a></div>
+    </div>
+</div>

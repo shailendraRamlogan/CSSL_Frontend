@@ -1,0 +1,24 @@
+<div x-data="{ atTop: false}" class="hidden fixed z-50 bg-white w-full md:block" @scroll.window="atTop = (window.pageYOffset > 20) ? true : false">
+    <div id="stickyHeader" x-show="atTop" class="flex py-4 md:block bg-darkGrey">
+        <div class="max-w-7xl mx-auto  grid grid-cols-6">
+            <a class="col-span-1 col-start-1 mx-auto" href="home.html"><img class="inline-flex" src="../../assets/images/logoSmall.png"/></a>
+            <ul class="invisible text-white font-bold md:visible md:inline-flex col-span-5 col-start-2 2xl:col-span-5 2xl:col-start-2 my-auto w-[100%] justify-end">
+                <li class="mx-2">
+                    <a class=" hover:text-primary" href="home.html">Home</a>
+                </li>
+                <li class="mx-2">
+                    <a class=" hover:text-primary" href="aboutUs.html">About Us</a>
+                </li>
+                <li class="mx-2">
+                    <a class=" hover:text-primary" href="products.html">Products</a>
+                </li>
+                <li class="mx-2">
+                    <a class=" hover:text-primary" href="projects.html">Projects</a>
+                </li>
+                <li class="mx-2">
+                    <a class=" hover:text-primary" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

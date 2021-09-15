@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> HtmlHead }}
+</head>
+<body class="antialiased font-OpenSans">
+{{>Header }}
+<div class="relative">
+    {{>pageTitle pageTitle="About Us"}}
+    <div class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div x-data="testimonial()" x-init="init()" class="">
+                <div class="testimonials ">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides h-[60rem] md:h-full">
+                        <!--glide slide-->
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="mb-20 grid grid-cols-20 md:items-center w-full mx-auto px-8">
+                                    <div class="col-span-20 row-start-1 col-start-1 col-end-21 md:col-span-auto md:col-start-1 md:col-end-17 lg:col-end-11 md:row-start-1 md:row-end-1 bg-red-500">
+                                        <picture class="relative block w-full h-0 pb bg-gray-300 overflow-hidden shadow-lg" style="padding-top: 75%;">
+                                            <img class="absolute inset-0 w-full h-full object-cover" src="../../assets/images/black_guy_warehouse.jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="col-span-20 row-start-2 col-start-1 col-end-21 md:col-span-auto md:col-start-10 md:col-end-21 md:row-start-1 md:row-end-1 md:mt-0 relative z-10 md:px-0">
+                                        <div class="p-6 md:p-10 bg-white shadow-lg">
+                                            <p class="mb-2 leading-8">
+                                                <h1 class="text-primary lg:pl-[4.75rem] font-bold text-base">Story of CSSL</h1>
+                                                <div class="flex">
+                                                    <span class=" hidden lg:flex lg:mt-9 lg:mr-8 flex-col h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+                                                    <h1 class="text-4xl my-4 font-bold inline">Leading Shelf Supplier</h1>
+                                                </div>
+                                            </p>
+                                            <p class="mb-2 text-sm leading-8 text-gray-700">
+                                                Commercial Shelving and Solutions Limited is a 
+                                                <strong>supplier and distributor of industrial and commercial shelving</strong> 
+                                                in Trinidad and Tobago. Our thrust is concentrated on supplying solutions for offices, warehouses and industrial complexes
+                                                throughout Trinidad and the Caribbean region. Our sales specialists have over 15 years of experience in the material handling industry.
+                                                
+                                                <p class="mb-2 pt-4 text-sm text-gray-700">
+                                                Their knowledge of the market and experience has seen the completion of many successful projects and satisfied
+                                                customers. We are located in Macoya Industrial Estate in north Trinidad and can
+                                                facilitate shelving installations effectively from our location.
+                                                </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="flex flex-col justify-center items-center cursor-pointer md:flex-row">
+                                <div class="grid grid-cols-20 md:items-center w-full mx-auto px-8">
+                                    <div class="col-span-20 row-start-1 col-start-1 col-end-21 md:col-span-auto md:col-start-1 md:col-end-17 lg:col-end-11 md:row-start-1 md:row-end-1">
+                                        <picture class="relative block w-full h-0 pb bg-gray-300 overflow-hidden shadow-lg" style="padding-top: 75%;">
+                                            <img class="absolute inset-0 w-full h-full object-cover" src="../../assets/images/white_guy_warehouse.jpg">
+                                        </picture>
+                                    
+                                    </div>
+                                    <div class="col-span-20 row-start-2 col-start-1 col-end-21 md:col-span-auto md:col-start-10 md:col-end-21 md:row-start-1 md:row-end-1 md:mt-0 relative z-10 md:px-0">
+                                        <div class="p-4 md:p-8 bg-white shadow-lg">
+                                            <p class="mb-2 leading-8 font-medium">
+                                                <h1 class="text-primary font-bold lg:pl-[4.75rem] text-base">Story of CSSL</h1>
+                                                <div class="flex">
+                                                    <span class=" hidden lg:flex lg:mt-9 lg:mr-8 flex-col h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+                                                    <h1 class="text-4xl my-4 font-bold inline">Customer Focused</h1>
+                                                </div>
+                                            </p>
+                                            <p class="mb-2 text-sm leading-8 text-gray-700">
+                                                Along with our formidable experience in supply and installation, we are committed
+                                                to becoming the most reliable and competitive supplier in the shelving industry. In
+                                                doing so, we are prepared to implement from planning to completion, various
+                                                Shelving systems from small to larger high capacity systems, be it steel storage
+                                                shelves or Mezzanine systems.
+
+                                                <p class="mb-2 pt-4 text-sm text-gray-700"> 
+                                                    Our company would be geared towards <strong>providing space utilization solutions for our customers</strong>. 
+                                                    We also offer solution services whereby
+                                                    outfitting offices, warehouses and industrial complexes with the necessary solutions
+                                                    that would create for an effective and safe work environment.
+                                                </p>
+                                                <p class="mb-2 pt-4 text-sm text-gray-700">
+                                                    Commercial Shelving and Solutions Limited’s aim is to become a leading shelving
+                                                    supplier with a philosophy in <strong>providing superior products and excellent customer
+                                                    service.</strong>
+                                                </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--glide slide end-->
+                    </div>
+                    <!--glide__slides end-->
+                    
+                </div>
+                <!--glide__track end-->
+
+            </div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+    <div class="bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-primary text-center font-bold text-base">Quality Of Work</h1>
+        <div class="flex justify-center">
+            <span class=" hidden lg:flex lg:mt-9 lg:mr-8 flex-col h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <h1 class="text-4xl my-4 font-bold inline">With Trusted Experience</h1>
+        </div>
+
+        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-24 my-16 px-8 py-8 ">
+            <div class="col-span-1 lg:col-start-1 lg:col-end-2 lg:row-start-1 shadow-xl">
+                <img class="w-full" src="../../assets/images/our_products.jpg"/>
+            </div>
+            <div class="col-span-1 lg:col-start-2 lg:col-end-3 lg:row-start-1 shadow-xl"  x-data="{ current: 0, target: 100, time: 3500}" 
+            x-init="() => {
+                            start = current; 
+                            const interval = Math.max(time / (target - start), 5); 
+                            const step = (target - start) /  (time / interval);  
+                            const handle = setInterval(() => {
+                                if(current < target) 
+                                    current += step
+                                else {
+                                    clearInterval(handle);
+                                    current = target
+                                }   
+                                }, interval)
+                        }">
+                <div id="value" class="text-8xl font-Montserrat font-normal text-center mt-6" x-text="Math.round(current)"></div>
+                <span class="block relative h-0.5 w-[5rem] mx-auto text-primary bg-current" :class="{'opacity-0': open } "></span>
+                <p class="text-center mx-4 mt-4 text-sm text-gray1 leading-7 font-normal uppercase">HUNDREDS OF PRODUCTS GIVES YOU THE WIDEST CHOICE FOR SHELVING</p>
+            </div>
+            <div class="col-span-1 lg:col-start-3 lg:col-end-4 lg:row-start-1 shadow-xl">
+                <img class="w-full" src="../../assets/images/our_brands.jpg"/>
+            </div>
+            <div class="col-span-1 lg:col-start-4 lg:col-end-5 lg:row-start-1 shadow-xl" x-data="{ current: 0, target: 5, time: 2500}" 
+            x-init="() => {
+                            start = current; 
+                            const interval = Math.max(time / (target - start), 5); 
+                            const step = (target - start) /  (time / interval);  
+                            const handle = setInterval(() => {
+                                if(current < target) 
+                                    current += step
+                                else {
+                                    clearInterval(handle);
+                                    current = target
+                                }   
+                                }, interval)
+                        }">>>
+                <div id="value1" class="text-8xl font-Montserrat font-normal text-center mt-6" x-text="Math.round(current)">5</div>
+                <span class="block relative h-0.5 w-[5rem] mx-auto text-primary bg-current" :class="{'opacity-0': open } "></span>
+                <p class="text-center mx-4 mt-4 text-sm text-gray1 leading-7 font-normal uppercase">SOLE DISTRIBUTOR FOR 5 OF THE TRUSTED BRANDS IN THE INDUSTRY</p>
+            </div>
+
+            <div class="col-span-1 lg:col-start-1 lg:col-end-2 lg:row-start-2 shadow-xl" x-data="{ current: 0, target: 50, time: 4500}" 
+            x-init="() => {
+                            start = current; 
+                            const interval = Math.max(time / (target - start), 5); 
+                            const step = (target - start) /  (time / interval);  
+                            const handle = setInterval(() => {
+                                if(current < target) 
+                                    current += step
+                                else {
+                                    clearInterval(handle);
+                                    current = target
+                                }   
+                                }, interval)
+                        }">>
+                <div id="value2" class="text-8xl font-Montserrat font-normal text-primary text-center mt-6"  x-text="Math.round(current)">50</div>
+                <span class="block relative h-0.5 w-[5rem] mx-auto text-black bg-current" :class="{'opacity-0': open } "></span>
+                <p class="text-center mx-4 mt-4 text-sm text-gray1 leading-7 font-normal uppercase">MORE THAN 50 PROJECTS COMPLETED</p>
+            </div>
+            <div class="col-span-1 lg:col-start-2 lg:col-end-3 lg:row-start-2 shadow-xl">
+                <img class="w-full" src="../../assets/images/trusted_experience.jpg"/>
+            </div>
+            <div class="col-span-1 lg:col-start-3 lg:col-end-4 lg:row-start-2 shadow-xl" x-data="{ current: 0, target: 15, time: 4500}" 
+            x-init="() => {
+                            start = current; 
+                            const interval = Math.max(time / (target - start), 5); 
+                            const step = (target - start) /  (time / interval);  
+                            const handle = setInterval(() => {
+                                if(current < target) 
+                                    current += step
+                                else {
+                                    clearInterval(handle);
+                                    current = target
+                                }   
+                                }, interval)
+                        }">>>
+                <div id="value3" class="text-8xl font-Montserrat font-normal text-primary text-center mt-6" x-text="Math.round(current)">15</div>
+                <span class="block relative h-0.5 w-[5rem] mx-auto text-black bg-current" :class="{'opacity-0': open } "></span>
+                <p class="text-center mx-4 mt-4 text-sm text-gray1 leading-7 font-normal uppercase">YEARS EXPERTISE</p>
+            </div>
+            <div class="col-span-1 lg:col-start-4 lg:col-end-5 lg:row-start-2 shadow-xl">
+                <img class="w-full" src="../../assets/images/trusted_experience.jpg"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</div>
+
+{{> Footer }}
+
+</body>
+</html>
+

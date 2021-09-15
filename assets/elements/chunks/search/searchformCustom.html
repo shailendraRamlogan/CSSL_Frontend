@@ -1,0 +1,10 @@
+<div class="site-search__close bg-black-0_8"></div>
+<form class="form-site-search" action="[[~[[+landing]]]]" method="[[+method]]">
+    <div class="input-group">
+        <input type="text" name="[[+searchIndex]]" id="[[+searchIndex]]" value="[[+searchValue]]" placeholder="Search" class="form-control py-3 border-white" required="" >
+        <input type="hidden" name="id" value="[[+landing]]" />
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" alue="[[%simplesearch.search? &namespace=`simplesearch` &topic=`default`]]"><i class="ti-search"></i></button>
+        </div>
+    </div>
+</form>

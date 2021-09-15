@@ -1,0 +1,162 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "../../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+
+html{
+    scroll-behavior: smooth;
+}
+
+.card-zoom {
+@apply relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-60 h-60 rounded-2xl;
+}
+.card-zoom-image {
+@apply object-cover w-full h-full transition-all duration-500 ease-in-out transform;
+}
+.card-zoom-text {
+@apply absolute text-5xl font-black transition-all duration-500 ease-in-out transform scale-150 text-gray-50 opacity-60;
+}
+.card-zoom:hover .card-zoom-image {
+@apply scale-150;
+}
+.card-zoom:hover .card-zoom-text {
+@apply scale-100;
+}
+
+.gradientImages{
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
+#testimonialDiv::before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+    background-color: rgba(48,48,48,0.80);
+}
+
+#testimonialDiv::after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+#sliderImage::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    opacity: 0.3;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #000000 100%);
+}
+
+#sliderImage::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,0.70);
+}
+.imageList li
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100%;
+    padding: 10px;
+	overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .imageList li{
+        width: 25%;
+        height: 25%;
+    }
+  }
+.imageList li:hover::before
+{
+	opacity: 0;
+	background-color: rgba(0,0,0,0.90);
+}
+.imageList li img
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	filter: brightness(50%);
+}
+.imageList li img:hover{
+    filter: brightness(100%);
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.trans
+{
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.lightbox
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+}
+.lightbox img
+{
+	max-width: 90%;
+	max-height: 80%;
+	position: relative;
+	top: -100%;
+	/* Transition */
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.lightbox:target
+{
+	outline: none;
+	top: 0;
+	opacity: 1;
+	pointer-events: auto;
+	transition: all 1.2s ease;
+	-moz-transition: all 1.2s ease;
+	-ms-transition: all 1.2s ease;
+	-o-transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+.lightbox:target img
+{
+	top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}

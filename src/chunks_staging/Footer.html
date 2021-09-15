@@ -1,0 +1,110 @@
+<footer class="relative bg-darkGrey font-OpenSans text-white text-xs pt-8 mb-0 text-center " aria-labelledby="footerHeading">
+    <div class=" grid pb-8 px-4 mx-auto max-w-7xl md:grid-cols-2 lg:grid-cols-4">
+        <div class="px-2 lg:px-8">
+        <ul class="pt-8 mb-8 flex">
+            <li class="">
+                <a class="text-primary font-bold text-lg" href="#">
+                    <i class="fa fa-pinterest hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-linkedin hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-facebook hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-instagram hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+            <li class="pl-4">
+                <a class="text-primary font-bold text-lg pl-4" href="#">
+                    <i class="fa fa-twitter hover:text-primary text-[#bbbbbb]"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="text-[#bbbbbb] text-base font-OpenSans leading-8 flex mt-2 text-left"> Our Trust is concentrated on supplying solutions for warehouses and industrial complexes throughout Trinidad and the Caribbean Region </p>
+        <br>
+        <p class="text-[#bbbbbb] text-sm font-OpenSans leading-8 flex mt-2 text-left pb-8"> CSSL - Commercial Shelving & Solutions Ltd © All rights reserved. </p>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">What we do</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base leading-8 mt-2">
+                <li>
+                    <a class="hover:text-white " href="#"> Mobile Shelving Units</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Pallet Racking Systems</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Mezzannine Floors</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> MH Pallet Trucks</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Rolling Ladders</a>
+                </li>
+                <li>
+                    <a class="" href="#"> Warehousing Fabric Shelters</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">Sitemap</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base mt-2 leading-8 ">
+                <li>
+                    <a class="hover:text-white" href="#"> Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> About</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Products</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Projects</a>
+                </li>
+                <li>
+                    <a class="hover:text-white" href="#"> Services</a>
+                </li>
+                <li>
+                    <a class="" href="#"> Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pt-8 px-2 lg:px-8">
+            <h3 class=" text-left font-bold text-base uppercase pb-1">Contact</h3>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <ul class="text-left text-[#bbbbbb] text-base mt-2 leading-8">
+                <li>
+                    <p class="">Address: </p>
+                    <p class="text-white text-80per ">7a Macoya Industrial Estate, Macoya, Trinidad W.I</p>
+                </li>
+                <li>
+                    <p class="">Phone: </p>
+                    <a class="hover:underline text-white" href="tel:+18686224131"> +1 (868) 622 4131</a>
+                </li>
+                <li>
+                    <p class="">Email: </p>
+                    <a class="hover:underline text-white " href="mailto:info@cssl.co"> Info@cssl.co </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <img class="filter brightness-[.3] w-full" src="../../assets//images/footer-bg.jpg"/>
+
+    <div x-data="{ attop: false}" @scroll.window="attop = (window.pageYOffset > 400) ? true : false">
+    <button x-show="attop" @click="window.scrollTo(0,0)"class="fixed bottom-[1rem] right-[1rem] text-lg bg-primary text-white cursor-pointer py-[10px] px-[15px] z-50" title="Go to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    </div>
+</footer>

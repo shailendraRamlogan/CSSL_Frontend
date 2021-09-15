@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> HtmlHead }}
+</head>
+<body class="antialiased font-OpenSans">
+{{>Header }}
+<div class="relative">
+{{>pageTitle pageTitle="Projects"}}
+
+    <div class="bg-white py-24">
+    <div class="max-w-7xl grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto px-8 ">
+        <div class="col-span-1 md:col-start-1 md:col-end-2 shadow-xl p-4">
+            <div class="overflow-hidden mb-8">
+            <a href="#">
+                <img class="w-full hover:scale-125 hover:brightness-[.3] transition ease-in duration-250" src="../../assets/images/project-lg5.jpg"/>
+            </a>
+            </div>
+            <a href="#" class="hover:text-primary text-2xl font-semibold">Design and build out for BP</a>
+            <img class="mt-8" src="../../assets/images/bpLogo.jpg"/>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <p class="my-8 leading-7 text-sm text-gray1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur cumque deleniti est explicabo…</p>
+            <a href="#" class="hover:text-primary font-normal text-base text-[#222222]">Read More<i class="fa fa-arrow-right ml-4 text-primary" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="col-span-1 md:col-start-2 md:col-end-3 shadow-xl p-4">
+            <div class="overflow-hidden mb-8">
+            <a href="#">
+                <img class="w-full hover:scale-125 hover:brightness-[.3] transition ease-in duration-250" src="../../assets/images/storage-shelf.jpg"/>
+            </a>
+            </div>
+            <a href="#" class="hover:text-primary text-2xl font-semibold">Build out for BP</a>
+            <img class="mt-8" src="../../assets/images/bpLogo.jpg"/>
+            <span class="block absolute h-0.5 w-10 text-primary bg-current" :class="{'opacity-0': open } "></span>
+            <p class="my-8 leading-7 text-sm text-gray1">Convenire gubergren ex vix. Habeo facete prie intellegam vix te, vim prompta facilisi interesset praesent…</p>
+            <a href="#" class="hover:text-primary font-normal text-base text-[#222222] ">Read More<i class="fa fa-arrow-right ml-4 text-primary" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+{{> Footer }}
+
+</body>
+</html>
+
